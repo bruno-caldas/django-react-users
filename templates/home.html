@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="{% static "bootstrap/dist/css/bootstrap.css" %}"  crossorigin="anonymous">
+
+     <!-- Bruno CSS -->
+     <link rel="stylesheet" href="{% static "css/base.css" %}"  crossorigin="anonymous">
+
+    <title>{{ title }}</title>
+  </head>
+  <body>
+
+	  <p>
+
+	  {% if request.user.is_authenticated %}
+		<a href="logout/">Logout</a>
+	  </p>
+	  <h1 class="container col-8 text-center">{{ content }}</h1>
+	  	<p> Seja bem vindo, {{ username }} !</p>
+	  {% else %}
+	  	<a href="login/">Log in </a>
+		|
+		<a href="register/">Register </a>
+	  </p>
+	  <h1 class="container col-8 text-center">{{ content }}</h1>
+	  	<p> Nenhum usuário registrado até o momento </p>
+
+	  {% endif %}
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static "bootstrap/dist/js/bootstrap.js" %}" crossorigin="anonymous"></script>
+  </body>
+</html>

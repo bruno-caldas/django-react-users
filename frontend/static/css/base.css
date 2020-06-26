@@ -1,0 +1,21 @@
+h1{
+	adding: 0 0 0 50px;
+    background-color: #d1dcde;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #27626b;
+}
+.formulario{
+	padding: 15px;
+}
+#submitButton{
+	background-color: #17a2b8;
+	position: relative;
+	width: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+#leftMenu{
+	display: inherit;
+	margin-left: auto;
+}
